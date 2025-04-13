@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#AA076B" />
+
+    <title>Check receipt</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Check receipt/ደረሰኝ ያረጋግጡ</h1>
+    <div class="container">
+      <label for="banks" id="labelbank"></label>
+
+      <select class="selection" name="banks" id="banks" onchange="chkreceipt()">
+        <option value="" selected>Choose a bank/የባንክ ስም ይምረጡ:</option>
+        <option value="CBE">CBE</option>
+        <option value="Telebirr">Telebirr</option>
+        <option value="Abyssinia">Abyssinia</option>
+        <option value="Dashen">Dashen</option></select
+      ><label for="TXID">Enter Transaction Id:</label>
+      <input type="text" placeholder="FT..." id="txid" />
+      <input
+        type="text"
+        placeholder="ከተቀባይ የሂሳብ ቁጥር ላይ የመጨረሻ 8 ቁጥሮች"
+        id="digit"
+        style="display: none"
+      />
+      <button id="show">Show</button>
+    </div>
+    <iframe src="" id="iframe"></iframe>
+    <script src="index.js"></script>
+  </body>
+</html>
