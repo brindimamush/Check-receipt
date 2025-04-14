@@ -8,7 +8,7 @@
     <title>Check receipt</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body onload="chkreceipt()">
     <h1>Check receipt/ደረሰኝ ያረጋግጡ</h1>
     <div class="container">
       <label for="banks" id="labelbank"></label>
@@ -27,7 +27,7 @@
         id="digit"
         style="display: none"
       />
-      <button id="show">Show</button>
+      <button id="show" onclick="checked()">Show</button>
     </div>
     <iframe src="" id="iframe"></iframe>
     <script src="index.js"></script>

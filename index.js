@@ -9,16 +9,31 @@ const labelbank=document.getElementById("labelbank");
 const digit=document.getElementById("digit");
 
 txid.addEventListener("input",function(){
-    if(txid.value.length===12){
-        console.log("hello");
+    if(banks.value==="CBE" && txid.value.length===12){
+       // console.log("hello");
         digit.style.display="inline";
     }
     else{
-        console.log("goodbye");
+       // console.log("goodbye");
         digit.style.display="none";
     }
 })
 function chkreceipt(){
 labelbank.innerHTML=banks.value;
-//console.log(banks.value);
+if(banks.value===""){
+txid.style.display="none";
+digit.style.display="none";
+}
+else if(banks.value==="CBE" && txid.value.length===12){
+digit.style.display="inline";
+txid.style.display="inline";
+}else{
+    digit.style.display="none";
+    txid.style.display="inline";
+}
+    //console.log(banks.value);
+}
+
+function checked(){
+    console.log("clicked");
 }
